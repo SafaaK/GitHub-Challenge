@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EmptyState.h"
 
-@interface GitListViewController : UIViewController
+@interface GitListViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet EmptyState *emptyState;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
 @end

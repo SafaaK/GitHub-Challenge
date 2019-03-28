@@ -51,12 +51,38 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kPU-6O-C4B">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gVm-2d-VLq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="raE-2Z-i68"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kPU-6O-C4B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="J8c-Lc-984"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kPU-6O-C4B" secondAttribute="bottom" id="bE5-b1-I44"/>
+                            <constraint firstItem="kPU-6O-C4B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e6n-VO-Tbl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kPU-6O-C4B" secondAttribute="trailing" id="xrf-eq-BhL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Trending Repos" id="Bwa-2s-Jot"/>
+                    <connections>
+                        <outlet property="emptyState" destination="ayS-TD-ckJ" id="2Bj-cB-pPH"/>
+                        <outlet property="tableView" destination="kPU-6O-C4B" id="NM5-da-iTo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="ayS-TD-ckJ" customClass="EmptyState">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="SSV-Nm-aJf"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="783.20000000000005" y="-838.83058470764627"/>
         </scene>
