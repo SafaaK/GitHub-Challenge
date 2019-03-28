@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CCF20583224CC8D800E1A740 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF20582224CC8D800E1A740 /* AppDelegate.m */; };
-		CCF20586224CC8D800E1A740 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF20585224CC8D800E1A740 /* ViewController.m */; };
+		CCF20586224CC8D800E1A740 /* GitListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCF20585224CC8D800E1A740 /* GitListViewController.m */; };
 		CCF20589224CC8D800E1A740 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF20587224CC8D800E1A740 /* Main.storyboard */; };
 		CCF2058B224CC8D900E1A740 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCF2058A224CC8D900E1A740 /* Assets.xcassets */; };
 		CCF2058E224CC8D900E1A740 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCF2058C224CC8D900E1A740 /* LaunchScreen.storyboard */; };
@@ -19,8 +19,8 @@
 		CCF2057E224CC8D800E1A740 /* GitHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCF20581224CC8D800E1A740 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CCF20582224CC8D800E1A740 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CCF20584224CC8D800E1A740 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CCF20585224CC8D800E1A740 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CCF20584224CC8D800E1A740 /* GitListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitListViewController.h; sourceTree = "<group>"; };
+		CCF20585224CC8D800E1A740 /* GitListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitListViewController.m; sourceTree = "<group>"; };
 		CCF20588224CC8D800E1A740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCF2058A224CC8D900E1A740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCF2058D224CC8D900E1A740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,8 +60,8 @@
 			children = (
 				CCF20581224CC8D800E1A740 /* AppDelegate.h */,
 				CCF20582224CC8D800E1A740 /* AppDelegate.m */,
-				CCF20584224CC8D800E1A740 /* ViewController.h */,
-				CCF20585224CC8D800E1A740 /* ViewController.m */,
+				CCF20584224CC8D800E1A740 /* GitListViewController.h */,
+				CCF20585224CC8D800E1A740 /* GitListViewController.m */,
 				CCF20587224CC8D800E1A740 /* Main.storyboard */,
 				CCF2058A224CC8D900E1A740 /* Assets.xcassets */,
 				CCF2058C224CC8D900E1A740 /* LaunchScreen.storyboard */,
@@ -141,7 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCF20586224CC8D800E1A740 /* ViewController.m in Sources */,
+				CCF20586224CC8D800E1A740 /* GitListViewController.m in Sources */,
 				CCF20591224CC8D900E1A740 /* main.m in Sources */,
 				CCF20583224CC8D800E1A740 /* AppDelegate.m in Sources */,
 			);

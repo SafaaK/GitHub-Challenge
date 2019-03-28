@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  GitListViewController.h
 //  GitHub
 //
 //  Created by Safaa Khalaf on 3/28/19.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface GitListViewController : UIViewController
 
 
 @end
