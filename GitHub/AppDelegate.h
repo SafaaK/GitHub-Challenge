@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ApiManager.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
++ (AppDelegate *)sharedAppDelegate;
+@property (strong, nonatomic) ApiManager *apiManager;
 
 @end
 

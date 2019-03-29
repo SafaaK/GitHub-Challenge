@@ -24,34 +24,31 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="u77-uj-yJg">
-                    <rect key="frame" x="20" y="223.5" width="335" height="220.5"/>
+                    <rect key="frame" x="50" y="228.5" width="275" height="210.5"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gitIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pJa-lJ-aCN">
-                            <rect key="frame" x="117.5" y="0.0" width="100" height="100"/>
+                            <rect key="frame" x="87.5" y="0.0" width="100" height="100"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="pJa-lJ-aCN" secondAttribute="height" id="ZWU-XV-yQD"/>
                                 <constraint firstAttribute="width" constant="100" id="ifi-H1-1t7"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLk-A3-4yd">
-                            <rect key="frame" x="0.0" y="120" width="335" height="20.5"/>
+                            <rect key="frame" x="0.0" y="120" width="275" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0Z-IA-XNz">
-                            <rect key="frame" x="0.0" y="160.5" width="335" height="60"/>
+                            <rect key="frame" x="0.0" y="160.5" width="275" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="fJL-rT-Q38"/>
+                                <constraint firstAttribute="height" constant="50" id="fJL-rT-Q38"/>
                             </constraints>
                             <state key="normal" title="Button"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                 <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                             </userDefinedRuntimeAttributes>
-                            <connections>
-                                <action selector="fetchGitList:" destination="-1" eventType="touchUpInside" id="oaQ-Uu-2z6"/>
-                            </connections>
                         </button>
                     </subviews>
                     <constraints>
@@ -64,8 +61,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="u77-uj-yJg" secondAttribute="trailing" constant="20" id="F3l-8f-EMw"/>
-                <constraint firstItem="u77-uj-yJg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="d3A-bV-wV4"/>
+                <constraint firstItem="u77-uj-yJg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="d3A-bV-wV4"/>
                 <constraint firstItem="u77-uj-yJg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uu3-i0-MYh"/>
                 <constraint firstItem="u77-uj-yJg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wkp-gS-hNA"/>
             </constraints>

@@ -14,9 +14,15 @@
 
 @implementation AppDelegate
 
++ (AppDelegate *)sharedAppDelegate
+{
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.apiManager = [[ApiManager alloc]init];
     return YES;
 }
 

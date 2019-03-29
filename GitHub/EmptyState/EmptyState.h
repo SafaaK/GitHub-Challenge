@@ -18,9 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *fetchButton;
 
 @property (strong, nonatomic) IBOutlet UIView *view;
-
-- (IBAction)fetchGitList:(id)sender;
+ 
 
 @end
+
+ 
+
 
 NS_ASSUME_NONNULL_END

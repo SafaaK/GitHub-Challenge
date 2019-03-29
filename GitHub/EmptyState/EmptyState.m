@@ -19,7 +19,7 @@
     self.emptyLabel.text = @"No List Found";
     
     self.fetchButton.layer.backgroundColor = BlueColor.CGColor;
-    [self.fetchButton setTitle:@"Fetch List" forState:UIControlStateNormal];
+    [self.fetchButton setTitle:@"Search GitHub" forState:UIControlStateNormal];
     self.fetchButton.tintColor = [UIColor whiteColor];
     
     self.view.frame = self.bounds;
@@ -53,8 +53,4 @@
 }
 
 
-- (IBAction)getchGitList:(id)sender {
-}
-- (IBAction)fetchGitList:(id)sender {
-}
 @end
