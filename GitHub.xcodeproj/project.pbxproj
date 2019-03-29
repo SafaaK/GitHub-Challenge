@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70CE537C4F8D91D01131FF75 /* libPods-GitHub.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 358BFE195A818DE90EEFE9DD /* libPods-GitHub.a */; };
 		CC3A194B224CF7BD0055E798 /* EmptyState.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3A1948224CF7BC0055E798 /* EmptyState.m */; };
 		CC3A194C224CF7BD0055E798 /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC3A1949224CF7BC0055E798 /* EmptyState.xib */; };
 		CC884D4E224E05FB00509023 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC884D4D224E05FB00509023 /* ApiManager.m */; };
@@ -23,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19EBACFA5D8F55CB019F8B75 /* Pods-GitHub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub/Pods-GitHub.release.xcconfig"; sourceTree = "<group>"; };
+		358BFE195A818DE90EEFE9DD /* libPods-GitHub.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHub.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		985ACA58C84546E262FC2434 /* Pods-GitHub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GitHub/Pods-GitHub.debug.xcconfig"; sourceTree = "<group>"; };
 		CC3A1946224CF7BC0055E798 /* DesignConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignConstants.h; sourceTree = "<group>"; };
 		CC3A1948224CF7BC0055E798 /* EmptyState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyState.m; sourceTree = "<group>"; };
 		CC3A1949224CF7BC0055E798 /* EmptyState.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
@@ -53,12 +57,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70CE537C4F8D91D01131FF75 /* libPods-GitHub.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18977D902124F02F99BF0DD3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				985ACA58C84546E262FC2434 /* Pods-GitHub.debug.xcconfig */,
+				19EBACFA5D8F55CB019F8B75 /* Pods-GitHub.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CC3A1945224CF7BC0055E798 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +143,8 @@
 			children = (
 				CCF20580224CC8D800E1A740 /* GitHub */,
 				CCF2057F224CC8D800E1A740 /* Products */,
+				18977D902124F02F99BF0DD3 /* Pods */,
+				F322A4A44F1339E47ABC87E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +176,14 @@
 			path = GitHub;
 			sourceTree = "<group>";
 		};
+		F322A4A44F1339E47ABC87E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				358BFE195A818DE90EEFE9DD /* libPods-GitHub.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CCF20594224CC8D900E1A740 /* Build configuration list for PBXNativeTarget "GitHub" */;
 			buildPhases = (
+				1B0B8EFBC577FD0311262C71 /* [CP] Check Pods Manifest.lock */,
 				CCF2057A224CC8D800E1A740 /* Sources */,
 				CCF2057B224CC8D800E1A740 /* Frameworks */,
 				CCF2057C224CC8D800E1A740 /* Resources */,
@@ -226,6 +251,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B0B8EFBC577FD0311262C71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GitHub-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CCF2057A224CC8D800E1A740 /* Sources */ = {
@@ -379,16 +425,14 @@
 		};
 		CCF20595224CC8D900E1A740 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 985ACA58C84546E262FC2434 /* Pods-GitHub.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46V53778K7;
 				INFOPLIST_FILE = GitHub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = demo.github.com.GitHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -397,16 +441,14 @@
 		};
 		CCF20596224CC8D900E1A740 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19EBACFA5D8F55CB019F8B75 /* Pods-GitHub.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46V53778K7;
 				INFOPLIST_FILE = GitHub/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = demo.github.com.GitHub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

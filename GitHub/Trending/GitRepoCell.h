@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface GitRepoCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *repoName;
-@property (weak, nonatomic) IBOutlet UILabel *repoDescription;
-//@property (weak, nonatomic) IBOutlet UIImageView *avatarImg;
+@property (weak, nonatomic) IBOutlet UILabel *repoDescription; 
 @property (weak, nonatomic) IBOutlet UILabel *ownerName;
 @property (weak, nonatomic) IBOutlet UILabel *startLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarImg;
 
 @end
 

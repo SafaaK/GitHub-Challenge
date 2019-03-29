@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "GitRepoCell.h"
 #import "GitRepo.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface GitListViewController ()
 
@@ -46,6 +47,9 @@ NSArray *gitRepos;
 }
 
 
+
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *tableID = @"GitRepoCell";
     GitRepoCell *repoCell = (GitRepoCell *)[tableView dequeueReusableCellWithIdentifier:tableID];
@@ -57,7 +61,9 @@ NSArray *gitRepos;
     repoCell.repoName.text = repoObj.name;
     repoCell.repoDescription.text = repoObj.desc;
     repoCell.ownerName.text = repoObj.owner;
-    repoCell.startLabel.text = [NSString stringWithFormat:@"%d",repoObj.starsCount];
+    repoCell.startLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)repoObj.starsCount];
+    [repoCell.avatarImg sd_setImageWithURL:[NSURL URLWithString:repoObj.avatar]
+                 placeholderImage:[UIImage imageNamed:@"imgPlaceholder"]];
     return repoCell;
     
 }
