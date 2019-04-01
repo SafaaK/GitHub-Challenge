@@ -12,9 +12,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyState">
             <connections>
-                <outlet property="emptyLabel" destination="LLk-A3-4yd" id="JJM-HU-ZAN"/>
                 <outlet property="fetchButton" destination="Y0Z-IA-XNz" id="xSg-Hz-Vb0"/>
                 <outlet property="imgIcon" destination="pJa-lJ-aCN" id="pFK-HN-iWD"/>
+                <outlet property="subtitleLabel" destination="Hfe-Jt-miK" id="iUw-k3-Iyg"/>
+                <outlet property="titleLabel" destination="LLk-A3-4yd" id="Qgw-BO-J0H"/>
                 <outlet property="view" destination="iN0-l3-epB" id="F0P-UE-KRI"/>
             </connections>
         </placeholder>
@@ -23,27 +24,39 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="u77-uj-yJg">
-                    <rect key="frame" x="50" y="228.5" width="275" height="210.5"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="FEh-k3-FVZ">
+                    <rect key="frame" x="30" y="208" width="315" height="251"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gitIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pJa-lJ-aCN">
-                            <rect key="frame" x="87.5" y="0.0" width="100" height="100"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="pJa-lJ-aCN" secondAttribute="height" id="ZWU-XV-yQD"/>
-                                <constraint firstAttribute="width" constant="100" id="ifi-H1-1t7"/>
-                            </constraints>
-                        </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLk-A3-4yd">
-                            <rect key="frame" x="0.0" y="120" width="275" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u77-uj-yJg">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="161"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gitIcon" translatesAutoresizingMaskIntoConstraints="NO" id="pJa-lJ-aCN">
+                                    <rect key="frame" x="107.5" y="0.0" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="pJa-lJ-aCN" secondAttribute="height" id="ZWU-XV-yQD"/>
+                                        <constraint firstAttribute="width" constant="100" id="ifi-H1-1t7"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLk-A3-4yd">
+                                    <rect key="frame" x="136.5" y="110" width="42" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfe-Jt-miK">
+                                    <rect key="frame" x="136.5" y="140.5" width="42" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0Z-IA-XNz">
-                            <rect key="frame" x="0.0" y="160.5" width="275" height="50"/>
+                            <rect key="frame" x="0.0" y="201" width="315" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="fJL-rT-Q38"/>
                             </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                             <state key="normal" title="Button"/>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
@@ -51,19 +64,13 @@
                             </userDefinedRuntimeAttributes>
                         </button>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="Y0Z-IA-XNz" secondAttribute="trailing" id="6kb-jr-fdK"/>
-                        <constraint firstAttribute="trailing" secondItem="LLk-A3-4yd" secondAttribute="trailing" id="HO6-6t-lk4"/>
-                        <constraint firstItem="Y0Z-IA-XNz" firstAttribute="leading" secondItem="u77-uj-yJg" secondAttribute="leading" id="cWe-q0-Mx7"/>
-                        <constraint firstItem="LLk-A3-4yd" firstAttribute="leading" secondItem="u77-uj-yJg" secondAttribute="leading" id="gRw-EQ-YJd"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="u77-uj-yJg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="d3A-bV-wV4"/>
-                <constraint firstItem="u77-uj-yJg" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uu3-i0-MYh"/>
-                <constraint firstItem="u77-uj-yJg" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wkp-gS-hNA"/>
+                <constraint firstItem="FEh-k3-FVZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="byc-PU-OPF"/>
+                <constraint firstItem="FEh-k3-FVZ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dYG-fm-p6a"/>
+                <constraint firstItem="FEh-k3-FVZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oF6-MV-JCa"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="40.799999999999997" y="46.326836581709152"/>

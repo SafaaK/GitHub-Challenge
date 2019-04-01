@@ -20,9 +20,8 @@
 
 #define MidGreyColor       [UIColor colorWithRed:187/255.0 green:187/255.0 blue:187/255.0 alpha:1.0]
 #define BlackColor       [UIColor blackColor]
-
-#define BlueColor   [UIColor colorWithRed:59/255.0 green:89/255.0 blue:152/255.0 alpha:1.0]
  
-
+#define purple   [UIColor colorWithRed:128/255.0 green:0/255.0 blue:128/255.0 alpha:1.0]
+ 
 
 #endif /* DesignConstants_h */

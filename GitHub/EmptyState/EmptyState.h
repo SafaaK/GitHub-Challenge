@@ -14,7 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface EmptyState : UIView
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgIcon;
-@property (weak, nonatomic) IBOutlet UILabel *emptyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *subtitleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *fetchButton;
 
 @property (strong, nonatomic) IBOutlet UIView *view;
