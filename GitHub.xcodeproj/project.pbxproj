@@ -48,7 +48,7 @@
 		CCF20588224CC8D800E1A740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCF2058A224CC8D900E1A740 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCF2058D224CC8D900E1A740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CCF2058F224CC8D900E1A740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCF2058F224CC8D900E1A740 /* Git-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Git-Info.plist"; sourceTree = "<group>"; };
 		CCF20590224CC8D900E1A740 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,7 +170,7 @@
 				CCF20587224CC8D800E1A740 /* Main.storyboard */,
 				CCF2058A224CC8D900E1A740 /* Assets.xcassets */,
 				CCF2058C224CC8D900E1A740 /* LaunchScreen.storyboard */,
-				CCF2058F224CC8D900E1A740 /* Info.plist */,
+				CCF2058F224CC8D900E1A740 /* Git-Info.plist */,
 				CCF20590224CC8D900E1A740 /* main.m */,
 			);
 			path = GitHub;
@@ -430,7 +430,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46V53778K7;
-				INFOPLIST_FILE = GitHub/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GitHub/Git-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,7 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46V53778K7;
-				INFOPLIST_FILE = GitHub/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GitHub/Git-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
