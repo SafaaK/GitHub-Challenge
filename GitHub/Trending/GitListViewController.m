@@ -42,8 +42,33 @@ NSArray *gitRepos;
         [self hideLoader];
 //        NSLog(@"gitRepos: %@",gitReposArray);
 //        NSLog(@"statusMsg: %@",statusMsg);
-        gitRepos = gitReposArray;
-        [self.tableView reloadData];
+        if(gitReposArray){
+            gitRepos = gitReposArray;
+            [self.tableView reloadData];
+        }
+        else{
+            //ERROR
+            
+            UIAlertController *errorAlert=   [UIAlertController
+                                              alertControllerWithTitle:nil
+                                              message:statusMsg
+                                              preferredStyle: UIAlertControllerStyleAlert];
+            
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            }];
+            [errorAlert addAction:cancelAction];
+            
+            if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+                errorAlert.popoverPresentationController.sourceView = self.view;
+                errorAlert.popoverPresentationController.sourceRect = CGRectMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height / 2.0, 1.0, 1.0);
+                [self presentViewController:errorAlert animated:YES completion:nil];
+                
+            }
+            else
+                [self presentViewController:errorAlert animated:YES completion:nil];
+            
+        }
+      
     }];
     
     
@@ -74,11 +99,8 @@ NSArray *gitRepos;
 }
 
 -(void)removeBlurEffect{
-    for(UIView *sub in self.view.subviews){
-        if(sub.tag == 11 || sub.tag == 10){
-            [sub removeFromSuperview];
-        }
-    }
+    [[self.view viewWithTag:10] removeFromSuperview];
+    [[self.view viewWithTag:11] removeFromSuperview];
     
 }
 
@@ -91,7 +113,7 @@ NSArray *gitRepos;
     //Initialization
     
     [self addBlurEffect];
-    hud = [[YBHud alloc]initWithHudType:DGActivityIndicatorAnimationTypeBallZigZagDeflect andText:@"Fetching Repos"];
+    hud = [[YBHud alloc]initWithHudType:DGActivityIndicatorAnimationTypeLineScaleParty andText:@"Fetching Repos"];
    
     
     //Tint Color (Indicator Color)
@@ -102,13 +124,31 @@ NSArray *gitRepos;
     
     //Optional User Interaction
     //hud.UserInteractionDisabled = YES; (User can interact with background views while HUD is displayed)
-     
+    
     //Optional Dim Amount of HUD
     hud.dimAmount = 0.1;
     
     //Display HUD
     [hud showInView:self.view animated:YES];
     
+}
+
+#pragma-mark Helper
+-(BOOL) isValidObject:(id)parameter{
+    
+    if (parameter == nil) {
+        return NO;
+    }
+    
+    if( (NSNull*)parameter == [NSNull null]){
+        return NO;
+    }
+    
+    if ([parameter isKindOfClass:[NSNull class]]) {
+        return NO;
+    }
+    
+    return YES;
 }
 
 
@@ -121,11 +161,20 @@ NSArray *gitRepos;
         repoCell = [nib objectAtIndex:0];
     }
     GitRepo *repoObj = [gitRepos objectAtIndex:indexPath.row];
-    repoCell.repoName.text = repoObj.name;
-    repoCell.repoDescription.text = repoObj.desc;
-    repoCell.ownerName.text = repoObj.owner;
-    repoCell.startLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)repoObj.starsCount];
-    [repoCell.avatarImg sd_setImageWithURL:[NSURL URLWithString:repoObj.avatar]
+    if([self isValidObject:repoObj.name])
+        repoCell.repoName.text = repoObj.name;
+    
+    if([self isValidObject:repoObj.desc])
+        repoCell.repoDescription.text = repoObj.desc;
+    
+     if([self isValidObject:repoObj.owner])
+         repoCell.ownerName.text = repoObj.owner;
+    
+//     if([self isValidObject:repoObj.starsCount])
+         repoCell.startLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)repoObj.starsCount];
+  
+     if([self isValidObject:repoObj.avatar])
+         [repoCell.avatarImg sd_setImageWithURL:[NSURL URLWithString:repoObj.avatar]
                  placeholderImage:[UIImage imageNamed:@"imgPlaceholder"]];
     return repoCell;
     

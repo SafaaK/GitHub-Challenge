@@ -16,7 +16,7 @@
     // Initialization code
     
     self.repoName.textColor = BlackColor;
-    self.repoName.font = [UIFont fontWithName:mediumFont size:regularSize];
+    self.repoName.font = [UIFont fontWithName:regularFont size:largeSize];
     
     self.repoDescription.textColor = MidGreyColor;
     self.repoDescription.font = [UIFont fontWithName:regularFont size:regularSize];
