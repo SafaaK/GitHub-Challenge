@@ -48,7 +48,6 @@ NSArray *gitRepos;
         }
         else{
             //ERROR
-            
             UIAlertController *errorAlert=   [UIAlertController
                                               alertControllerWithTitle:nil
                                               message:statusMsg
@@ -58,16 +57,8 @@ NSArray *gitRepos;
             }];
             [errorAlert addAction:cancelAction];
             
-            if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-                errorAlert.popoverPresentationController.sourceView = self.view;
-                errorAlert.popoverPresentationController.sourceRect = CGRectMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height / 2.0, 1.0, 1.0);
-                [self presentViewController:errorAlert animated:YES completion:nil];
-                
-            }
-            else
-                [self presentViewController:errorAlert animated:YES completion:nil];
-            
-        }
+            [self presentViewController:errorAlert animated:YES completion:nil];
+         }
       
     }];
     

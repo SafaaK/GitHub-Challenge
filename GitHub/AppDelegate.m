@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DesignConstants.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.apiManager = [[ApiManager alloc]init];
+    
+    [[UITabBar appearance] setTintColor:purple];
+    
     return YES;
 }
 
