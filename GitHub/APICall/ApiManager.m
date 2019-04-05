@@ -12,8 +12,21 @@
 
 @implementation ApiManager
 
-#define GitHubSearchURL @"https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc"
+#define GitHubSearchURL @"https://api.github.com/search/repositories?q=created:>%@&sort=stars&order=desc&page=%d"
 
+
+
+-(NSString *)lastMonthDate{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    
+    NSDate *date = [cal dateByAddingUnit:NSCalendarUnitMonth value:-1 toDate:[NSDate date] options:0];;
+    NSString *dateString = [dateFormatter stringFromDate:date];
+    NSLog(@"dateString: %@",dateString);
+    return dateString;
+}
  
 -(void)fetchGithubRepos:(int)page completion:(CompletionBlock)completionBlock
 {
@@ -29,10 +42,10 @@
         defaultConfigObject.timeoutIntervalForResource = 30.0;
         NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate:nil delegateQueue: [NSOperationQueue mainQueue]];
         
-        
-        NSURLSessionDataTask *dataTask=[defaultSession dataTaskWithURL:[NSURL URLWithString: [[NSString stringWithFormat:@"%@&page=%lu",GitHubSearchURL,(unsigned long)page] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]]] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSURL *url = [NSURL URLWithString:[[NSString stringWithFormat:GitHubSearchURL,[self lastMonthDate],page] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]]];
+        NSLog(@"calling API: %@",url);
+        NSURLSessionDataTask *dataTask=[defaultSession dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             NSString *statusMsg;
-            
             
             if (error==nil) {
                 NSError *err = nil;
