@@ -18,16 +18,16 @@
 
 @implementation GitListViewController
 YBHud *hud;
-NSArray *gitRepos;
+NSMutableArray *gitRepos;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    gitRepos = [[NSArray alloc]init];
-    // Do any additional setup after loading the view, typically from a nib.
+    gitRepos = [[NSMutableArray alloc]init];
+    self.pageNum = 1;
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
-    self.tableView.backgroundView = self.emptyState;
+    
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 44.0;
     
@@ -38,12 +38,10 @@ NSArray *gitRepos;
 
 - (void)fetchGitList{
     [self showLoader];
-    [[AppDelegate sharedAppDelegate].apiManager fetchGitHubSearches:^(NSArray * gitReposArray, NSString * statusMsg) {
+    [[AppDelegate sharedAppDelegate].apiManager fetchGithubRepos:self.pageNum completion:^(NSArray * gitReposArray, NSString * statusMsg) {
         [self hideLoader];
-//        NSLog(@"gitRepos: %@",gitReposArray);
-//        NSLog(@"statusMsg: %@",statusMsg);
         if(gitReposArray){
-            gitRepos = gitReposArray;
+            [gitRepos addObjectsFromArray:gitReposArray];
             [self.tableView reloadData];
         }
         else{
@@ -161,12 +159,12 @@ NSArray *gitRepos;
      if([self isValidObject:repoObj.owner])
          repoCell.ownerName.text = repoObj.owner;
     
-//     if([self isValidObject:repoObj.starsCount])
-         repoCell.startLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)repoObj.starsCount];
+    repoCell.startLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)repoObj.starsCount];
   
-     if([self isValidObject:repoObj.avatar])
+    if([self isValidObject:repoObj.avatar])
          [repoCell.avatarImg sd_setImageWithURL:[NSURL URLWithString:repoObj.avatar]
                  placeholderImage:[UIImage imageNamed:@"imgPlaceholder"]];
+  
     return repoCell;
     
 }
@@ -178,8 +176,12 @@ NSArray *gitRepos;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if(gitRepos.count == 0){
-         [self.emptyState setHidden:false];
+        self.tableView.backgroundView = self.emptyState;
     }
+    else{
+        self.tableView.backgroundView = nil;
+    }
+ 
     return gitRepos.count;
 }
 

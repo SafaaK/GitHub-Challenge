@@ -42,7 +42,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KFa-pJ-Zfl">
                                 <rect key="frame" x="0.0" y="5" width="120" height="50"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fpp-sV-r4U">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="fpp-sV-r4U">
                                         <rect key="frame" x="0.0" y="5" width="60" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="T07-CF-8lR"/>
@@ -103,6 +103,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="imgPlaceholder" width="128" height="128"/>
         <image name="star" width="25" height="25"/>
     </resources>
 </document>

@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) IBOutlet EmptyState *emptyState;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
+@property (nonatomic, assign) int pageNum;
 
 @end
 

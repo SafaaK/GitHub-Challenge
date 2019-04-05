@@ -15,20 +15,12 @@
 #define GitHubSearchURL @"https://api.github.com/search/repositories?q=created:>2017-10-22&sort=stars&order=desc"
 
  
--(void)fetchGitHubSearches:(CompletionBlock)completionBlock
+-(void)fetchGithubRepos:(int)page completion:(CompletionBlock)completionBlock
 {
     if(![self isInternetAvailable]){
         NSString *statusMsg = @"Internet connection failure.";
         completionBlock(nil, statusMsg);
     }
-    
-    else if(![self isAPIReachable]){
-        
-        NSString *statusMsg = @"DNS cannot resolve host";
-        completionBlock(nil, statusMsg);
-        
-    }
-    
     else{
         
         NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -37,7 +29,8 @@
         defaultConfigObject.timeoutIntervalForResource = 30.0;
         NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate:nil delegateQueue: [NSOperationQueue mainQueue]];
         
-        NSURLSessionDataTask *dataTask=[defaultSession dataTaskWithURL:[NSURL URLWithString: [GitHubSearchURL stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]]] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        NSURLSessionDataTask *dataTask=[defaultSession dataTaskWithURL:[NSURL URLWithString: [[NSString stringWithFormat:@"%@&page=%lu",GitHubSearchURL,(unsigned long)page] stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLFragmentAllowedCharacterSet]]] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             NSString *statusMsg;
             
             
@@ -79,20 +72,9 @@
             }
             
         }];
-        
          [dataTask resume];
     }
-}
--(bool) isAPIReachable
-{
-    bool success = false;
-    const char *host_name = [GitHubSearchURL cStringUsingEncoding:NSASCIIStringEncoding];
-    SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithName(NULL,host_name);
-    SCNetworkReachabilityFlags flags;
-    success = SCNetworkReachabilityGetFlags(reachability, &flags);
-    bool isAPIReachable = success && (flags & kSCNetworkFlagsReachable) && !(flags & kSCNetworkFlagsConnectionRequired);
-    return isAPIReachable;
-}
+} 
 
 -(bool) isInternetAvailable
 {
