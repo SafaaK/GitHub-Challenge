@@ -21,7 +21,7 @@
 Splash Image:
 ![Launch](https://user-images.githubusercontent.com/5706425/55712211-022fec00-59f7-11e9-9d33-3fcb528ea1cd.png)
 
-No Results Fteched Yet:
+No Results Fetched Yet:
 ![InitialState](https://user-images.githubusercontent.com/5706425/55712210-022fec00-59f7-11e9-8559-e3ac79c26ed8.png)
 
 Fetching Results:
