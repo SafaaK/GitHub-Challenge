@@ -18,14 +18,10 @@
 
 
 ## Screen Shots
-
-![ScreenShot] (https://user-images.githubusercontent.com/5706425/55712207-01975580-59f7-11e9-8b88-46ab370c0c05.png)
-
-https://user-images.githubusercontent.com/5706425/55712211-022fec00-59f7-11e9-9d33-3fcb528ea1cd.png
-
-https://user-images.githubusercontent.com/5706425/55712210-022fec00-59f7-11e9-8559-e3ac79c26ed8.png
-
-https://user-images.githubusercontent.com/5706425/55712212-022fec00-59f7-11e9-8a15-c3d7b3bb49d8.png
+![Fetching](https://user-images.githubusercontent.com/5706425/55712207-01975580-59f7-11e9-8b88-46ab370c0c05.png)
+![InitialState](https://user-images.githubusercontent.com/5706425/55712210-022fec00-59f7-11e9-8559-e3ac79c26ed8.png)
+![Launch](https://user-images.githubusercontent.com/5706425/55712211-022fec00-59f7-11e9-9d33-3fcb528ea1cd.png)
+![RepodsTable](https://user-images.githubusercontent.com/5706425/55712212-022fec00-59f7-11e9-8a15-c3d7b3bb49d8.png)
 
 
 
