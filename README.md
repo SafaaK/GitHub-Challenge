@@ -19,7 +19,7 @@
 
 ## Screen Shots
 
-![image] (https://user-images.githubusercontent.com/5706425/55712207-01975580-59f7-11e9-8b88-46ab370c0c05.png)
+![ScreenShot] (https://user-images.githubusercontent.com/5706425/55712207-01975580-59f7-11e9-8b88-46ab370c0c05.png)
 
 https://user-images.githubusercontent.com/5706425/55712211-022fec00-59f7-11e9-9d33-3fcb528ea1cd.png
 
