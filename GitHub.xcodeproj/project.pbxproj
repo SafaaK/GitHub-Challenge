@@ -46,6 +46,8 @@
 		CC2A1BC62251F2C900F3288E /* DGActivityIndicatorLineScalePulseOutRapidAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2A1B9F2251F2C900F3288E /* DGActivityIndicatorLineScalePulseOutRapidAnimation.m */; };
 		CC3A194B224CF7BD0055E798 /* EmptyState.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3A1948224CF7BC0055E798 /* EmptyState.m */; };
 		CC3A194C224CF7BD0055E798 /* EmptyState.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC3A1949224CF7BC0055E798 /* EmptyState.xib */; };
+		CC4E92FF225B155200F6E66C /* LoadingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CC4E92FD225B155200F6E66C /* LoadingCell.m */; };
+		CC4E9300225B155200F6E66C /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4E92FE225B155200F6E66C /* LoadingCell.xib */; };
 		CC884D4E224E05FB00509023 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC884D4D224E05FB00509023 /* ApiManager.m */; };
 		CC884D53224E0ACD00509023 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CC884D51224E0ACD00509023 /* Reachability.m */; };
 		CC884D57224E0EE800509023 /* GitRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = CC884D56224E0EE800509023 /* GitRepo.m */; };
@@ -140,6 +142,9 @@
 		CC3A1948224CF7BC0055E798 /* EmptyState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmptyState.m; sourceTree = "<group>"; };
 		CC3A1949224CF7BC0055E798 /* EmptyState.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EmptyState.xib; sourceTree = "<group>"; };
 		CC3A194A224CF7BC0055E798 /* EmptyState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyState.h; sourceTree = "<group>"; };
+		CC4E92FC225B155200F6E66C /* LoadingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoadingCell.h; sourceTree = "<group>"; };
+		CC4E92FD225B155200F6E66C /* LoadingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadingCell.m; sourceTree = "<group>"; };
+		CC4E92FE225B155200F6E66C /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		CC884D4C224E05FB00509023 /* ApiManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		CC884D4D224E05FB00509023 /* ApiManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
 		CC884D51224E0ACD00509023 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -340,6 +345,9 @@
 				CCA75562224E2FBA000A32F6 /* GitRepoCell.h */,
 				CCA75564224E2FBA000A32F6 /* GitRepoCell.m */,
 				CCA75560224E2FBA000A32F6 /* GitRepoCell.xib */,
+				CC4E92FC225B155200F6E66C /* LoadingCell.h */,
+				CC4E92FD225B155200F6E66C /* LoadingCell.m */,
+				CC4E92FE225B155200F6E66C /* LoadingCell.xib */,
 			);
 			path = Trending;
 			sourceTree = "<group>";
@@ -450,6 +458,7 @@
 			files = (
 				CCF2058E224CC8D900E1A740 /* LaunchScreen.storyboard in Resources */,
 				CCA75565224E2FBA000A32F6 /* GitRepoCell.xib in Resources */,
+				CC4E9300225B155200F6E66C /* LoadingCell.xib in Resources */,
 				CC3A194C224CF7BD0055E798 /* EmptyState.xib in Resources */,
 				CCF2058B224CC8D900E1A740 /* Assets.xcassets in Resources */,
 				CCF20589224CC8D800E1A740 /* Main.storyboard in Resources */,
@@ -524,6 +533,7 @@
 				CC2A1BC62251F2C900F3288E /* DGActivityIndicatorLineScalePulseOutRapidAnimation.m in Sources */,
 				CC2A1BAA2251F2C900F3288E /* DGActivityIndicatorAnimation.m in Sources */,
 				CC2A1BBE2251F2C900F3288E /* DGActivityIndicatorBallScaleRippleMultipleAnimation.m in Sources */,
+				CC4E92FF225B155200F6E66C /* LoadingCell.m in Sources */,
 				CC884D4E224E05FB00509023 /* ApiManager.m in Sources */,
 				CC2A1BB72251F2C900F3288E /* DGActivityIndicatorBallClipRotateMultipleAnimation.m in Sources */,
 				CC2A1BC12251F2C900F3288E /* DGActivityIndicatorBallSpinFadeLoader.m in Sources */,

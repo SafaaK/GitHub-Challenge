@@ -14,12 +14,12 @@
 -(void)loadHeader{
     [[NSBundle mainBundle] loadNibNamed:@"EmptyState" owner:self options:nil];
     
-    self.titleLabel.textColor = BlackColor;
+    self.titleLabel.textColor = [UIColor blackColor];
     self.titleLabel.font = [UIFont fontWithName:regularFont size:largeSize];
     self.titleLabel.text = @"No Available Results";
     
     
-    self.subtitleLabel.textColor = MidGreyColor;
+    self.subtitleLabel.textColor = [UIColor darkGrayColor];
     self.subtitleLabel.font = [UIFont fontWithName:regularFont size:regularSize];
     self.subtitleLabel.text = @"List the most starred Github repos that were created in the last 30 days. ";
     

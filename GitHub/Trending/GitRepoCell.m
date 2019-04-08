@@ -15,16 +15,16 @@
     [super awakeFromNib];
     // Initialization code
     
-    self.repoName.textColor = BlackColor;
+    self.repoName.textColor = [UIColor blackColor];
     self.repoName.font = [UIFont fontWithName:regularFont size:largeSize];
     
-    self.repoDescription.textColor = MidGreyColor;
+    self.repoDescription.textColor = [UIColor darkGrayColor];
     self.repoDescription.font = [UIFont fontWithName:regularFont size:regularSize];
     
-    self.ownerName.textColor = BlackColor;
+    self.ownerName.textColor = [UIColor blackColor];
     self.ownerName.font = [UIFont fontWithName:lightFont size:regularSize];
     
-    self.startLabel.textColor = BlackColor;
+    self.startLabel.textColor = [UIColor blackColor];
     self.startLabel.font = [UIFont fontWithName:lightFont size:regularSize];
 }
 

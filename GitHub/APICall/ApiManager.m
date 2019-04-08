@@ -14,8 +14,6 @@
 
 #define GitHubSearchURL @"https://api.github.com/search/repositories?q=created:>%@&sort=stars&order=desc&page=%d"
 
-
-
 -(NSString *)lastMonthDate{
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"]];
@@ -24,7 +22,6 @@
     
     NSDate *date = [cal dateByAddingUnit:NSCalendarUnitMonth value:-1 toDate:[NSDate date] options:0];;
     NSString *dateString = [dateFormatter stringFromDate:date];
-    NSLog(@"dateString: %@",dateString);
     return dateString;
 }
  

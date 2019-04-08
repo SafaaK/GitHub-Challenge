@@ -17,9 +17,7 @@
 #define smallSize 16.0
 #define regularSize 18.0
 #define largeSize 20.0
-
-#define MidGreyColor       [UIColor colorWithRed:187/255.0 green:187/255.0 blue:187/255.0 alpha:1.0]
-#define BlackColor       [UIColor blackColor]
+ 
  
 #define purple   [UIColor colorWithRed:128/255.0 green:0/255.0 blue:128/255.0 alpha:1.0]
  
