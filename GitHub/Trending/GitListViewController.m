@@ -55,7 +55,7 @@ bool isLoading;
         }
         
         isLoading = false;
-        if(gitReposArray){
+        if(gitReposArray.count > 0){
             [gitRepos addObjectsFromArray:gitReposArray];
             [self.tableView reloadData];
         }

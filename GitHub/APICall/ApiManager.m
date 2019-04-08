@@ -27,9 +27,10 @@
  
 -(void)fetchGithubRepos:(int)page completion:(CompletionBlock)completionBlock
 {
+    
     if(![self isInternetAvailable]){
         NSString *statusMsg = @"Internet connection failure.";
-        completionBlock(nil, statusMsg);
+        completionBlock([[NSArray alloc]init], statusMsg);
     }
     else{
         
@@ -71,14 +72,14 @@
                     completionBlock(reposArray, statusMsg);
                 }
                 else{
-                   completionBlock(nil, statusMsg);
+                   completionBlock([[NSArray alloc]init], statusMsg);
                 }
                 
                 
             }
             else{
                 statusMsg = [error description];
-                completionBlock(nil, statusMsg);
+                completionBlock([[NSArray alloc]init], statusMsg);
             }
             
         }];
