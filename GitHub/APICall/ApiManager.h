@@ -15,10 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void (^CompletionBlock)(NSArray *, NSString *);
 
 -(void)fetchGithubRepos:(int)page completion:(CompletionBlock)completionBlock;
-
--(bool) isInternetAvailable; 
-
-
+-(bool) isInternetAvailable;
 
 @end
 
